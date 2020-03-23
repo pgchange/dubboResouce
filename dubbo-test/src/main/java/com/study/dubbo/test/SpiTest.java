@@ -1,8 +1,8 @@
 package com.study.dubbo.test;
 
 import com.study.dubbo.PrizeService;
+import com.study.dubbo.PrizeServiceImpl;
 
-import java.util.Iterator;
 import java.util.ServiceLoader;
 
 /**
@@ -19,5 +19,9 @@ public class SpiTest {
             System.out.println(prizeService.getPrize());
             prizeService.sendPrize();
         }
+
+
+        PrizeService prizeService = new PrizeServiceImpl();
+        prizeService.sendPrize();
     }
 }
