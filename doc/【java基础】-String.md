@@ -193,6 +193,8 @@ efg
         return len1 - len2;
     }
 ```
+String类型重写了Object中的equals()方法，当判断是String类型后会循环对比两个字符串中每一个字符是否相等。
+compareTo方法入参为String,同样是循环String内的字符进行比较。
 
 
 3.hashCode方法
@@ -211,6 +213,13 @@ efg
     }
 
 ```
+为什么是31？
+https://segmentfault.com/a/1190000010799123
+这篇文章讲的比较细
+
+摘抄一下：
+第一，31是一个不大不小的质数，是作为 hashCode 乘子的优选质数之一。另外一些相近的质数，比如37、41、43等等，也都是不错的选择。那么为啥偏偏选中了31呢？请看第二个原因。
+第二、31可以被 JVM 优化，31 * i = (i << 5) - i。
 
 4.intern方法
 
@@ -218,14 +227,14 @@ efg
     public native String intern();
 ```
 
+
+
 ## 知识点扩展
-1.String类为什么设计成final类
+1.String类为什么设计成final类?
 
+2.StringBuffer和StringBuilder的区别.
 
-2.StringBuffer和StringBuilder的区别
-
-
-3.
+3.String与JVM
 
 
 
