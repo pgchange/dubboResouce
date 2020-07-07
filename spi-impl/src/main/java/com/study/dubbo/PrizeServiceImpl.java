@@ -6,8 +6,14 @@ package com.study.dubbo;
  */
 public class PrizeServiceImpl implements PrizeService {
 
+
+    private static final String aa = "";
+
+
+    private boolean flag = false;
     @Override
     public String getPrize() {
+        boolean aa = false;
         return "默认抽奖模式";
     }
 
